@@ -1,4 +1,3 @@
-import Button from "../components/Button";
 import logo from "../images/logo.png";
 import React, { useState } from "react";
 
@@ -15,7 +14,7 @@ export default function Header() {
                 <div className="flex items-center justify-between">
                     <a href="#">
                         <img
-                            className="w-auto h-12 sm:h-[6rem]"
+                            className="w-auto h-12 sm:h-[5.3rem]"
                             src={logo}
                             alt="Logo"
                         />
@@ -72,25 +71,25 @@ export default function Header() {
                 >
                     <div className="flex flex-col md:flex-row md:mx-6">
                         <a
-                            className="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
                             Home
                         </a>
                         <a
-                            className="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
                             Shop
                         </a>
                         <a
-                            className="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
                             Contact
                         </a>
                         <a
-                            className="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
                             About
