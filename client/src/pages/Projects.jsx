@@ -87,14 +87,16 @@ export default function Projects() {
 
     return (
         <div className="px-4 md:px-20 lg:px-40">
-            <h2 className="text-3xl font-bold text-center  py-4">Проекти</h2>
+            <h2 className="text-3xl font-bold text-center  py-4 text-[#2d2d31]">
+                Проекти
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
                 {data.map((item, index) => (
                     <figure
                         key={index}
-                        className="shadow-lg rounded-lg w-90 mx-auto flex flex-col h-full"
+                        className="shadow-custom-md rounded-sm w-90 mx-auto flex flex-col h-full" // Use shadow-custom-md class here
                     >
-                        <div className="flex-1 flex items-center justify-center h-64 min-h-[300px] overflow-hidden ">
+                        <div className="flex-1 flex items-center justify-center h-64 min-h-[300px] overflow-hidden">
                             <img
                                 className="object-contain w-full max-h-full"
                                 src={item.image}
