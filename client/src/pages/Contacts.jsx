@@ -1,9 +1,9 @@
 export default function Contacts() {
     return (
-        <section class="bg-black">
+        <section class="bg-white">
             <div class="container px-6 py-12 mx-auto">
                 <div>
-                    <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
+                    <h1 class="mt-2 text-2xl font-semibold text-[#2d2d31] md:text-3x">
                         Свържете се с нас
                     </h1>
 
@@ -15,7 +15,7 @@ export default function Contacts() {
                 <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
                     <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
                         <div>
-                            <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                            <span class="inline-block p-3 text-white rounded-full bg-[#1f2937]">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -32,17 +32,17 @@ export default function Contacts() {
                                 </svg>
                             </span>
 
-                            <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">
+                            <h2 class="mt-4 text-base font-medium text-[#2d2d31]">
                                 Email
                             </h2>
 
-                            <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                            <p class="mt-2 text-sm text-[#1f2937]">
                                 office@brs-industry.eu
                             </p>
                         </div>
 
                         <div>
-                            <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                            <span class="inline-block p-3 text-white rounded-full bg-[#1f2937]">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -64,16 +64,14 @@ export default function Contacts() {
                                 </svg>
                             </span>
 
-                            <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">
+                            <h2 class="mt-4 text-base font-medium text-[#2d2d31]">
                                 Офис
                             </h2>
-                            <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
-                                Адрес:
-                            </p>
+                            <p class="mt-2 text-sm text-[#1f2937]">бул. Христо Ботев 112</p>
                         </div>
 
                         <div>
-                            <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                            <span class="inline-block p-3  rounded-full text-white rounded-full bg-[#1f2937]">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -90,13 +88,13 @@ export default function Contacts() {
                                 </svg>
                             </span>
 
-                            <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">
+                            <h2 class="mt-4 text-base font-medium text-[#2d2d31]">
                                 Телефон
                             </h2>
                             <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                                 Пон-Петък от 8:00 до 17:30
                             </p>
-                            <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                            <p class="mt-2 text-sm text-[#1f2937]">
                                 +99999999999
                             </p>
                         </div>

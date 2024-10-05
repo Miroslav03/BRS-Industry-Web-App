@@ -74,25 +74,25 @@ export default function Header() {
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
-                            Home
+                            За Нас
                         </a>
                         <a
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
-                            Shop
+                            Материали
                         </a>
                         <a
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
-                            Contact
+                            Проекти
                         </a>
                         <a
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
                             href="#"
                         >
-                            About
+                            Контакти
                         </a>
                     </div>
                 </div>
