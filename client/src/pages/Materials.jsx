@@ -31,7 +31,7 @@ export default function Materials() {
         <section
             id="materials"
             ref={sectionRef}
-            className="flex flex-col items-center justify-center h-auto py-12 md:py-0 transition-all duration-1000"
+            className="flex flex-col items-center justify-center h-auto py-4 md:py-14 transition-all duration-1000"
         >
             <h2
                 className={`text-3xl font-bold text-center pb-4 text-[#2d2d31] transition-all duration-1000 ${

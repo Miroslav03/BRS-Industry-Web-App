@@ -99,20 +99,20 @@ export default function Projects() {
                         const index = parseInt(entry.target.dataset.index, 10);
                         setVisibleItems((prev) => {
                             const newVisibleItems = [...prev];
-                            newVisibleItems[index] = true; // Mark this item as visible
+                            newVisibleItems[index] = true; 
                             return newVisibleItems;
                         });
-                        observer.unobserve(entry.target); // Stop observing once it's visible
+                        observer.unobserve(entry.target); 
                     }
                 });
             },
             {
-                threshold: 0.1, // Trigger when 10% of the item is visible
+                threshold: 0.1, 
             }
         );
 
         refs.current.forEach((ref) => {
-            if (ref) observer.observe(ref); // Observe each item
+            if (ref) observer.observe(ref); 
         });
 
         return () => {
@@ -123,7 +123,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="px-4 md:px-20 lg:px-40 py-12">
+        <div className="px-4 md:px-20 lg:px-40 py-12 md:py-4">
             <h2 className="text-3xl font-bold text-center py-4 text-[#2d2d31]">
                 Проекти
             </h2>
