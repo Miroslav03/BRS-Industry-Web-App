@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from "react";
 import table from "../images/table.jpg";
 import table2 from "../images/table2.jpg";
 import table3 from "../images/table3.jpg";
@@ -85,6 +86,42 @@ export default function Projects() {
         { image: table15, alt: "Chair", text: "Сборна" },
     ];
 
+    const [visibleItems, setVisibleItems] = useState(
+        Array(data.length).fill(false)
+    );
+    const refs = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const index = parseInt(entry.target.dataset.index, 10);
+                        setVisibleItems((prev) => {
+                            const newVisibleItems = [...prev];
+                            newVisibleItems[index] = true; // Mark this item as visible
+                            return newVisibleItems;
+                        });
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger when 10% of the item is visible
+            }
+        );
+
+        refs.current.forEach((ref) => {
+            if (ref) observer.observe(ref); // Observe each item
+        });
+
+        return () => {
+            refs.current.forEach((ref) => {
+                if (ref) observer.unobserve(ref); // Cleanup
+            });
+        };
+    }, []);
+
     return (
         <div className="px-4 md:px-20 lg:px-40 py-12">
             <h2 className="text-3xl font-bold text-center py-4 text-[#2d2d31]">
@@ -94,11 +131,18 @@ export default function Projects() {
                 {data.map((item, index) => (
                     <figure
                         key={index}
-                        className="shadow-custom-md rounded-sm w-full flex flex-col h-full" // Ensure the figure takes full width
+                        data-index={index}
+                        ref={(el) => (refs.current[index] = el)}
+                        className={`shadow-custom-md rounded-sm w-full flex flex-col h-full transition-opacity duration-500 ${
+                            visibleItems[index]
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-10"
+                        }`}
+                        style={{ transitionDelay: `${index * 30}ms` }}
                     >
                         <div className="flex-1 flex items-center justify-center h-64 overflow-hidden">
                             <img
-                                className="object-cover w-full h-full" // Cover the container with the image
+                                className="object-cover w-full h-full"
                                 src={item.image}
                                 alt={item.alt}
                             />

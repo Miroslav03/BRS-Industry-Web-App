@@ -1,13 +1,51 @@
+import { useEffect, useRef, useState } from "react";
+
 export default function Materials() {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setTimeout(() => {
+                        setIsVisible(true);
+                    }, 400);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <section className="flex flex-col items-center justify-center h-[14rem] ">
-            <h2 className="text-3xl font-bold text-center  pb-4 text-[#2d2d31]">
+        <section
+            id="materials"
+            ref={sectionRef}
+            className="flex flex-col items-center justify-center h-[14rem] transition-all duration-1000"
+        >
+            <h2
+                className={`text-3xl font-bold text-center pb-4 text-[#2d2d31] transition-all duration-1000 ${
+                    isVisible ? "animate-fadeInSlideUp" : "opacity-0"
+                }`}
+            >
                 Материали
             </h2>
-            <div className="grid grid-cols-3 gap-x-4 gap-y-6 text-center">
+            <div
+                className={`grid grid-cols-3 gap-x-4 gap-y-6 text-center transition-all duration-1000 ${
+                    isVisible ? "animate-fadeInSlideUp" : "opacity-0"
+                }`}
+            >
                 <div className="shadow-custom-md p-4">
-                    {" "}
-                    {/* Add padding for better visual spacing */}
                     <p className="text-[1rem] font-semibold">
                         Всякакви стандартни плоскости - ПДЧ, МДФ и други
                     </p>
