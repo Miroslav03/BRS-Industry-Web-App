@@ -111,25 +111,37 @@ export default function Header() {
                     <div className="flex flex-col md:flex-row md:mx-6">
                         <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            onClick={() => scrollToSection("company-info")}
+                            onClick={() => {
+                                scrollToSection("company-info");
+                                closeMenu();
+                            }}
                         >
                             За Нас
                         </button>
                         <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            onClick={() => scrollToSection("materials")}
+                            onClick={() => {
+                                scrollToSection("materials");
+                                closeMenu();
+                            }}
                         >
                             Материали
                         </button>
                         <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            onClick={() => scrollToSection("projects")}
+                            onClick={() => {
+                                scrollToSection("projects");
+                                closeMenu();
+                            }}
                         >
                             Проекти
                         </button>
                         <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            onClick={() => scrollToSection("contacts")}
+                            onClick={() => {
+                                scrollToSection("contacts");
+                                closeMenu();
+                            }}
                         >
                             Контакти
                         </button>
