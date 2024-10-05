@@ -1,6 +1,6 @@
 export default function CompanyInfo() {
     return (
-        <section className="flex flex-col items-center justify-center h-auto py-16 md:h-[17rem] px-4 md:px-10 md:mt-14">
+        <section className="flex flex-col items-center justify-center h-auto py-14 md:h-[17rem] px-4 md:px-10 md:mt-12">
             <h2 className="mb-8 text-3xl font-bold leading-tight tracking-tight text-center text-[#2d2d31]">
                 За нас
             </h2>
