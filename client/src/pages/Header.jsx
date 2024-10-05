@@ -8,17 +8,25 @@ export default function Header() {
         setIsOpen((prev) => !prev);
     };
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
-        <nav className="relative bg-white shadow dark:bg-gray-800">
+        <nav className="sticky top-0 z-50 bg-white shadow dark:bg-gray-800">
+            {" "}
             <div className="container px-6 mx-auto md:flex md:justify-between md:items-center">
                 <div className="flex items-center justify-between">
-                    <a href="#">
+                    <button onClick={() => scrollToSection("hero")}>
                         <img
                             className="w-auto h-12 sm:h-[5.3rem]"
                             src={logo}
                             alt="Logo"
                         />
-                    </a>
+                    </button>
 
                     <div className="flex lg:hidden">
                         <button
@@ -70,30 +78,30 @@ export default function Header() {
                     }`}
                 >
                     <div className="flex flex-col md:flex-row md:mx-6">
-                        <a
+                        <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            href="#"
+                            onClick={() => scrollToSection("company-info")}
                         >
                             За Нас
-                        </a>
-                        <a
+                        </button>
+                        <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            href="#"
+                            onClick={() => scrollToSection("materials")}
                         >
                             Материали
-                        </a>
-                        <a
+                        </button>
+                        <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            href="#"
+                            onClick={() => scrollToSection("projects")}
                         >
                             Проекти
-                        </a>
-                        <a
+                        </button>
+                        <button
                             className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
-                            href="#"
+                            onClick={() => scrollToSection("contacts")}
                         >
                             Контакти
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

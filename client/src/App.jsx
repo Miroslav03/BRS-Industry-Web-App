@@ -10,11 +10,21 @@ export default function App() {
     return (
         <>
             <Header />
-            <Hero />
-            <CompanyInfo />
-            <Materials />
-            <Projects />
-            <Contacts />
+            <div id="hero">
+                <Hero />
+            </div>
+            <div id="company-info">
+                <CompanyInfo />
+            </div>
+            <div id="materials">
+                <Materials />
+            </div>
+            <div id="projects">
+                <Projects />
+            </div>
+            <div id="contacts">
+                <Contacts />
+            </div>
             <Footer />
         </>
     );

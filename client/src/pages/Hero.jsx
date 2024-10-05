@@ -1,11 +1,15 @@
 import Button from "../components/Button";
 
 export default function Hero() {
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
         <div className="relative flex items-center justify-center h-[45em] bg-cover bg-center bg-main-background">
-            {/* Dark Overlay for Darkening the Background Image */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
-            {/* Text Content */}
             <div className="relative text-center z-10">
                 <h1 className="mb-8 text-5xl font-bold leading-tight tracking-tight text-white">
                     Индивидуални решения за индустриално и офис обзавеждане
@@ -19,7 +23,9 @@ export default function Hero() {
                     пространство.
                 </p>
                 <div>
-                    <Button children={"Разгледай"} size={"big"} />
+                    <button onClick={() => scrollToSection("projects")}>
+                        <Button children={"Разгледай"} size={"big"} />
+                    </button>
                 </div>
             </div>
         </div>
