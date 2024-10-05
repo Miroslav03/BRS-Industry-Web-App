@@ -31,7 +31,7 @@ export default function Materials() {
         <section
             id="materials"
             ref={sectionRef}
-            className="flex flex-col items-center justify-center h-[14rem] transition-all duration-1000"
+            className="flex flex-col items-center justify-center h-auto py-12 md:py-0 transition-all duration-1000"
         >
             <h2
                 className={`text-3xl font-bold text-center pb-4 text-[#2d2d31] transition-all duration-1000 ${
@@ -41,7 +41,7 @@ export default function Materials() {
                 Материали
             </h2>
             <div
-                className={`grid grid-cols-3 gap-x-4 gap-y-6 text-center transition-all duration-1000 ${
+                className={`grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6 text-center transition-all duration-1000 w-[90%] md:w-auto ${
                     isVisible ? "animate-fadeInSlideUp" : "opacity-0"
                 }`}
             >

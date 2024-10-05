@@ -1,11 +1,16 @@
 import logo from "../images/logo.png";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const toggleMenu = () => {
         setIsOpen((prev) => !prev);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false);
     };
 
     const scrollToSection = (id) => {
@@ -15,9 +20,32 @@ export default function Header() {
         }
     };
 
+    // Detect clicks outside the menu to close it
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                closeMenu();
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    // Prevent body from scrolling horizontally when menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflowX = "hidden";
+        } else {
+            document.body.style.overflowX = "auto";
+        }
+    }, [isOpen]);
+
     return (
         <nav className="sticky top-0 z-50 bg-white shadow dark:bg-gray-800">
-            {" "}
             <div className="container px-6 mx-auto md:flex md:justify-between md:items-center">
                 <div className="flex items-center justify-between">
                     <button onClick={() => scrollToSection("hero")}>
@@ -58,6 +86,7 @@ export default function Header() {
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
                                     strokeWidth="2"
+                                    onClick={closeMenu}
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -71,6 +100,7 @@ export default function Header() {
                 </div>
 
                 <div
+                    ref={menuRef}
                     className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
                         isOpen
                             ? "translate-x-0 opacity-100"
