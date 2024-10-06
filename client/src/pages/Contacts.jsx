@@ -104,7 +104,7 @@ export default function Contacts() {
                         </div>
                     </div>
 
-                    <div className="overflow-hidden rounded-lg lg:col-span-2 lg:h-auto h-96 outline-none focus-within:outline-[#1f2937]">
+                    <div className="overflow-hidden rounded-lg lg:col-span-2 lg:h-auto h-96 outline-none">
                         <iframe
                             width="100%"
                             height="100%"
