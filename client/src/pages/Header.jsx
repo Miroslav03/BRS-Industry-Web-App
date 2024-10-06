@@ -110,7 +110,7 @@ export default function Header() {
                 >
                     <div className="flex flex-col md:flex-row md:mx-6">
                         <button
-                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
+                            className="my-2 text-white transition-transform duration-300 transform hover:scale-105 md:mx-4 md:my-0"
                             onClick={() => {
                                 scrollToSection("company-info");
                                 closeMenu();
@@ -119,7 +119,7 @@ export default function Header() {
                             За Нас
                         </button>
                         <button
-                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
+                            className="my-2 text-white transition-transform duration-300 transform  hover:scale-105 md:mx-4 md:my-0"
                             onClick={() => {
                                 scrollToSection("materials");
                                 closeMenu();
@@ -128,7 +128,7 @@ export default function Header() {
                             Материали
                         </button>
                         <button
-                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
+                            className="my-2 text-white transition-transform duration-300 transform  hover:scale-105 md:mx-4 md:my-0"
                             onClick={() => {
                                 scrollToSection("projects");
                                 closeMenu();
@@ -137,7 +137,7 @@ export default function Header() {
                             Проекти
                         </button>
                         <button
-                            className="my-2 text-gray-700 transition-transform duration-300 transform dark:text-gray-200 hover:scale-105 md:mx-4 md:my-0"
+                            className="my-2 text-white transition-transform duration-300 transform  hover:scale-105 md:mx-4 md:my-0"
                             onClick={() => {
                                 scrollToSection("contacts");
                                 closeMenu();
