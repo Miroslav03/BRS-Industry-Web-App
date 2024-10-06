@@ -45,7 +45,7 @@ export default function Header() {
     }, [isOpen]);
 
     return (
-        <nav className="sticky top-0 z-50 bg-white shadow dark:bg-gray-800">
+        <nav className="sticky top-0 z-50 bg-[#1f2937]">
             <div className="container px-6 mx-auto md:flex md:justify-between md:items-center">
                 <div className="flex items-center justify-between">
                     <button onClick={() => scrollToSection("hero")}>
